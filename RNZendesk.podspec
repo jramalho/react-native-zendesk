@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.source_files = "ios/**/*.{h,m,swift}"
 
 
-  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/Public/React"' }
+  spec.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/Public/React"' }
   spec.dependency "ZendeskSDK"
 
 end
