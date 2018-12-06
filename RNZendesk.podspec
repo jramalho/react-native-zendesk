@@ -15,7 +15,8 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/Caribu/react-native-zendesk.git" }
   spec.source_files = "ios/**/*.{h,m,swift}"
 
+
+  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/Public/React"' }
   spec.dependency "ZendeskSDK"
-  spec.dependency "React"
 
 end
