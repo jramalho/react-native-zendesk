@@ -15,5 +15,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/Caribu/react-native-zendesk.git" }
   spec.source_files = "ios/**/*.{h,m,swift}"
 
+  spec.dependency   = "ZendeskSDK"
 
 end
