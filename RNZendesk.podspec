@@ -16,5 +16,4 @@ Pod::Spec.new do |spec|
   spec.source_files = "ios/**/*.*"
 
 
-  spec.dependency   "React"
 end
