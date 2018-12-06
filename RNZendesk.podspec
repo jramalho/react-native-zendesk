@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
   spec.source       = { :git => "https://github.com/Caribu/react-native-zendesk.git" }
-  spec.source_files = "ios/**/*.*"
+  spec.source_files = "ios/**/*.{h,m,swift}"
 
 
 end
