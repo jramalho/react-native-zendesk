@@ -16,5 +16,6 @@ Pod::Spec.new do |spec|
   spec.source_files = "ios/**/*.{h,m,swift}"
 
   spec.dependency "ZendeskSDK"
+  spec.dependency "React"
 
 end
