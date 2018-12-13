@@ -48,6 +48,13 @@ class RNZendesk: RCTEventEmitter {
         let identity = Identity.createJwt(token: token)
         Zendesk.instance?.setIdentity(identity)
     }
+
+    @objc(identifyAnonymous)
+    func identifyAnonymous() {
+        let identity = Identity.createAnonymous()
+        
+        Zendesk.instance?.setIdentity(identity)
+    }
     
     @objc(showHelpCenter:)
     func showHelpCenter(with options: [String: Any]) {

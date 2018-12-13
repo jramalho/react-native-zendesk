@@ -14,6 +14,7 @@
 RCT_EXTERN_METHOD(initialize:(NSDictionary *)config);
 
 RCT_EXTERN_METHOD(identifyJWT:(NSString *)token);
+RCT_EXTERN_METHOD(identifyAnonymous);
 
 RCT_EXTERN_METHOD(showHelpCenter:(NSDictionary *)options);
 
