@@ -59,9 +59,6 @@ public class RNZendeskBridge extends ReactContextBaseJavaModule {
                 .show(getReactApplicationContext(), hcConfig);
 */
 
-System.out.println("show help center");
-System.out.println("show help center");
-System.out.println("show help center");
     CustomField c2 = new CustomField(360016501732L, options.getString("Device_Brand"));
     CustomField c3 = new CustomField(360016554711L, options.getString("Device_Model"));
     CustomField c4 = new CustomField(360016554731L, options.getString("OS"));
@@ -69,15 +66,6 @@ System.out.println("show help center");
     CustomField c6 = new CustomField(360016554751L, options.getString("App_Version"));
     CustomField c7 = new CustomField(360016502792L, options.getString("Connection"));
     CustomField c8 = new CustomField(360016556691L, options.getString("Phone_or_Tablet"));
-    System.out.println("phone or tablet");
-    System.out.println("phone or tablet");
-    System.out.println("phone or tablet");
-    System.out.println("phone or tablet");
-    System.out.println("phone or tablet");
-    System.out.println("phone or tablet");
-    System.out.println("phone or tablet");
-    System.out.println("phone or tablet");
-    System.out.println(options.getString("Phone_or_Tablet"));
     /*
     .withRequestSubject("Android ticket")
     .withTags("android", "mobile")
