@@ -1,6 +1,6 @@
 {
   "name": "react-native-zendesk",
-  "version": "1.0.7-1-2",
+  "version": "1.0.7-1-3",
   "description": "Zendesk SDK for React Native.",
   "main": "index.js",
   "scripts": {
