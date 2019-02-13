@@ -51,10 +51,18 @@ class RNZendesk: RCTEventEmitter {
         Zendesk.instance?.setIdentity(identity)
     }
 
+    @objc(identifyAnonymous)
+    func identifyAnonymous() {
+        let identity = Identity.createAnonymous()
+
+        Zendesk.instance?.setIdentity(identity)
+    }
+
     @objc(showHelpCenter:)
     func showHelpCenter(with options: [String: Any]) {
 
         DispatchQueue.main.async {
+
             let config = RequestUiConfiguration()
             let helpCenter = HelpCenterUi.buildHelpCenterOverviewUi(withConfigs: [config])
 
