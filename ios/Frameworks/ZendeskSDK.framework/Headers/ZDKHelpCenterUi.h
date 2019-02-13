@@ -15,12 +15,12 @@
  */
 
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #import "ZDKHelpCenterConversationsUIDelegate.h"
-#import "ZDKUiConfiguration.h"
 
 @class ZDKHelpCenterArticle;
+@protocol ZDKUiConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,33 +30,28 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Build the Help Center Overview view controller. Displays an overview of your HelpCenter
  *
- *  @since 2.3.0
+ *  @since 2.0.0
  */
-+ (UIViewController *) buildHelpCenterOverviewUi;
-
-+ (UIViewController <ZDKHelpCenterDelegate>*) buildHelpCenterOverview __attribute__((deprecated("use buildHelpCenterOverviewUi instead")));
++ (UIViewController <ZDKHelpCenterDelegate>*) buildHelpCenterOverview;
 
 /**
  * Build the Help Center Overview view controller with a list of ZDKUiConfigurations.
  *
  *  @param configs A list of ZDKUiConfigurations.
  *
- *  @since 2.3.0
+ *  @since 2.0.0
  */
-+ (UIViewController *) buildHelpCenterOverviewUiWithConfigs:(NSArray<id <ZDKUiConfiguration>> *)configs;
++ (UIViewController <ZDKHelpCenterDelegate>*) buildHelpCenterOverviewWithConfigs:(NSArray<ZDKUiConfiguration> *)configs;
 
-+ (UIViewController <ZDKHelpCenterDelegate>*) buildHelpCenterOverviewWithConfigs:(NSArray<id <ZDKUiConfiguration>> *)configs __attribute__((deprecated("use buildHelpCenterOverviewUiWithConfigs instead")));
 
 /**
  * Build the Help Center Article view controller. Displays a single article.
  *
  *  @param article A ZDKHelpCenterArticle to display.
  *
- *  @since 2.3.0
+ *  @since 2.0.0
  */
-+ (UIViewController *) buildHelpCenterArticleUi:(ZDKHelpCenterArticle *)article;
-
-+ (UIViewController<ZDKHelpCenterDelegate>*) buildHelpCenterArticle:(ZDKHelpCenterArticle *)article __attribute__((deprecated("use buildHelpCenterArticleUi instead")));
++ (UIViewController<ZDKHelpCenterDelegate>*) buildHelpCenterArticle:(ZDKHelpCenterArticle *)article;
 
 /**
  * Build the Help Center Article view controller. Displays a single article.
@@ -64,24 +59,18 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param article A ZDKHelpCenterArticle to display.
  *  @param configs A list of ZDKUiConfigurations.
  *
- *  @since 2.3.0
+ *  @since 2.0.0
  */
-+ (UIViewController *) buildHelpCenterArticleUi:(ZDKHelpCenterArticle *)article
-                                     andConfigs:(NSArray<id <ZDKUiConfiguration>> *)configs;
-
 + (UIViewController<ZDKHelpCenterDelegate>*) buildHelpCenterArticle:(ZDKHelpCenterArticle *)article
-                                                         andConfigs:(NSArray<id <ZDKUiConfiguration>> *)configs __attribute__((deprecated("use buildHelpCenterArticleUi:andConfigs instead")));
-
+                                                         andConfigs:(NSArray<ZDKUiConfiguration> *)configs;
 /**
  * Build the Help Center Article view controller. Displays a single article.
  *
  *  @param articleId The ID of a Help Center article. This is fetched and displayed.
  *
- *  @since 2.3.0
+ *  @since 2.0.0
  */
-+ (UIViewController *) buildHelpCenterArticleUiWithArticleId:(NSString *)articleId;
-
-+ (UIViewController<ZDKHelpCenterDelegate>*) buildHelpCenterArticleWithArticleId:(NSString *)articleId __attribute__((deprecated("use buildHelpCenterArticleUiWithArticleId instead")));
++ (UIViewController<ZDKHelpCenterDelegate>*) buildHelpCenterArticleWithArticleId:(NSString *)articleId;
 
 /**
  * Build the Help Center Article view controller. Displays a single article.
@@ -89,13 +78,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param articleId The ID of a Help Center article. This is fetched and displayed.
  *  @param configs A list of ZDKUiConfigurations.
  *
- *  @since 2.3.0
+ *  @since 2.0.0
  */
-+ (UIViewController *) buildHelpCenterArticleUiWithArticleId:(NSString *)articleId
-                                                  andConfigs:(NSArray<id <ZDKUiConfiguration>> *)configs;
-
 + (UIViewController<ZDKHelpCenterDelegate>*) buildHelpCenterArticleWithArticleId:(NSString *)articleId
-                                                                      andConfigs:(NSArray<id <ZDKUiConfiguration>> *)configs __attribute__((deprecated("use buildHelpCenterArticleUiWithArticleId:andConfigs instead")));
+                                                                      andConfigs:(NSArray<ZDKUiConfiguration> *)configs;
 
 
 @end

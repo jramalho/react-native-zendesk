@@ -23,14 +23,12 @@
  - ZDKContactUsVisibilityArticleListOnly: The contact us nav bar button is only visible in the article list.
  - ZDKContactUsVisibilityOff: The contact us nav bar button is not visible anywhere.
  */
-__attribute__((deprecated("use ZDKHelpCenterUiConfiguration and ZDKArticleUiConfiguration to configure the 'contact us' button on their respective screens ")))
 typedef NS_ENUM(NSUInteger, ZDKContactUsVisibility) {
     ZDKContactUsVisibilityArticleListAndArticle,
     ZDKContactUsVisibilityArticleListOnly,
     ZDKContactUsVisibilityOff,
 };
 
-__attribute__((deprecated("use ZDKHelpCenterUiConfiguration and ZDKArticleUiConfiguration to configure the 'contact us' button on their respective screens ")))
 @protocol ZDKHelpCenterConversationsUIDelegate <NSObject>
 
 
@@ -40,6 +38,14 @@ __attribute__((deprecated("use ZDKHelpCenterUiConfiguration and ZDKArticleUiConf
  *  @return The ZDKNavBarConversationsUIType to display.
  */
 - (ZDKNavBarConversationsUIType) navBarConversationsUIType;
+
+
+/**
+ *  To conform implementations should return an image for the right nav bar button.
+ *
+ *  @return An image for the right nav bar button.
+ */
+- (UIImage *) conversationsBarButtonImage;
 
 /**
  *  Determines where the coversations nav bar button will be displayed.
@@ -57,16 +63,8 @@ __attribute__((deprecated("use ZDKHelpCenterUiConfiguration and ZDKArticleUiConf
  */
 - (NSString *) conversationsBarButtonLocalizedLabel;
 
-/**
- *  To conform implementations should return an image for the right nav bar button.
- *
- *  @return An image for the right nav bar button.
- */
-- (UIImage *) conversationsBarButtonImage;
-
 @end
 
-__attribute__((deprecated("use ZDKHelpCenterUiConfiguration and ZDKArticleUiConfiguration to configure the 'contact us' button on their respective screens ")))
 @protocol ZDKHelpCenterDelegate <NSObject>
 
 @property (nonatomic, weak) id<ZDKHelpCenterConversationsUIDelegate> uiDelegate;
