@@ -40,6 +40,8 @@ class RNZendesk: RCTEventEmitter {
         
         Zendesk.initialize(appId: appId, clientId: clientId, zendeskUrl: zendeskUrl)
         Support.initialize(withZendesk: Zendesk.instance)
+        let identity = Identity.createAnonymous()
+        Zendesk.instance?.setIdentity(identity)
     }
     
     @objc(identifyJWT:)
