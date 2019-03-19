@@ -4,6 +4,7 @@ import zendesk.commonui.UiConfig;
 import zendesk.core.AnonymousIdentity;
 import zendesk.core.Zendesk;
 import zendesk.core.Identity;
+import zendesk.core.AnonymousIdentity;
 import zendesk.core.JwtIdentity;
 import zendesk.support.Support;
 import zendesk.support.guide.HelpCenterActivity;
@@ -37,6 +38,21 @@ public class RNZendeskBridge extends ReactContextBaseJavaModule {
         Identity identity = new AnonymousIdentity();
         Zendesk.INSTANCE.setIdentity(identity);
         Support.INSTANCE.init(Zendesk.INSTANCE);
+    }
+    
+    @ReactMethod
+    public void identifyAnon() {
+        Identity identity = new AnonymousIdentity();
+        Zendesk.INSTANCE.setIdentity(identity);
+    }
+
+    @ReactMethod
+    public void identifyAnon(String name, String email) {
+        Identity identity = new AnonymousIdentity.Builder()
+            .withNameIdentifier(name)
+            .withEmailIdentifier(email)
+            .build();
+        Zendesk.INSTANCE.setIdentity(identity);
     }
 
     @ReactMethod
