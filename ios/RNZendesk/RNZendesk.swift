@@ -44,6 +44,12 @@ class RNZendesk: RCTEventEmitter {
         Zendesk.instance?.setIdentity(identity)
     }
     
+    @objc(identifyAnon::)
+    func identifyAnon(name: String, email: String) {
+        let identity = Identity.createAnonymous(name: name, email: email)
+        Zendesk.instance?.setIdentity(identity)
+    }
+    
     @objc(identifyJWT:)
     func identifyJWT(token: String?) {
         guard let token = token else { return }
